@@ -1,4 +1,13 @@
 ## 一点点类
+**类是模板，而实例则是根据类创建的对象**  
+
+  
+类的属性是用来表明这个类是什么的，类的属性分为实例属性与类属性两种：
+- **实例属性**用于区分不同的实例
+- **类属性**是每个实例的共有属性
+
+区别：实例属性每个实例都各自拥有，相互独立；而类属性有且只有一份，是共有的属性
+
 
 ---
 
@@ -17,9 +26,24 @@
 
 - 函数和对象的区分  
   函数用小写字母命名，而类用 CamelCase 形式命名
+
   ```py
-  class CountFromBy:
-      pass
+  class CountFromBy: # 创建 CountFromBy 类
+
+  # __init__() 函数
+  def __init__(self, v: int=0, i: int=1) -> None:  # 初始化两个属性 v 和 i
+      self.val = v
+      self.incr = i
+  
+  # 对象方法
+  def increase(self) -> None:
+      self.val += self.incr
+
+  def __repr__(self) -> str:
+      return str(self.val)
   ```
+  - 每次使用类创建新对象时，都会自动调用 `__init__()` 函数
+  - `self` 参数是对类的当前实例的引用，用于访问属于该类的变量
+
 
 - 对象共享行为，但不共享状态 = 方法代码是共享的，而属性数据不共享
