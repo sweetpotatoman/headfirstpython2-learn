@@ -2,7 +2,7 @@ vowels = ['a','i','o','e','u']
 word = "Milliways"
 
 for letter in word:
-    if letter in vowels
+    if letter in vowels:
         print(letter)
 
 # --------
