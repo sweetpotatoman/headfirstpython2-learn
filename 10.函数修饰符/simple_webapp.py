@@ -1,6 +1,7 @@
 from flask import Flask, session
 
 from checker import check_logged_in
+# from 
 
 app = Flask(__name__)
 
@@ -29,9 +30,9 @@ def do_logout() -> str:
 
 @app.route('/page1')
 @check_logged_in
-def page1():
-    return 'This is page 1.'
-
+def page1(name='page1'):
+    return 'This is page %s' % name
+    # print('this is page %s.' % name)
 
 @app.route('/page2')
 @check_logged_in
