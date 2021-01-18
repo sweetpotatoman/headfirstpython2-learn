@@ -43,9 +43,9 @@ def a_descriptive_name(optional_arguments):
 
 ### 模块寻找
 寻找模块时，解释器会从这三个地方搜索模块：
-- 当前工作目录
-- 解释器的 site-packages 位置 --- 包含已安装的第三方 python 模块（也包含自己写的模块） ---> `os / sys / random ....`
-- 标准库位置 (BIF) ---> `print / dir / help ....`
+1. 当前工作目录
+2. 解释器的 site-packages 位置 --- 包含已安装的第三方 python 模块（也包含自己写的模块） ---> `os / sys / random ....`
+3. 标准库位置 (BIF) ---> `print / dir / help ....`
 
 > 无法使用指定路径的方式导入模块，因为 `import` 不指定，所以可以把自己编写的模块，增加到某个 `site-packages` 中
 
