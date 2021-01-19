@@ -29,18 +29,18 @@
 
   ```py
   class CountFromBy: # 创建 CountFromBy 类
+      
+        # __init__() 函数
+        def __init__(self, v: int=0, i: int=1) -> None:  # 初始化两个属性 v 和 i
+            self.val = v
+            self.incr = i
+        
+        # 对象方法
+        def increase(self) -> None:
+            self.val += self.incr
 
-  # __init__() 函数
-  def __init__(self, v: int=0, i: int=1) -> None:  # 初始化两个属性 v 和 i
-      self.val = v
-      self.incr = i
-  
-  # 对象方法
-  def increase(self) -> None:
-      self.val += self.incr
-
-  def __repr__(self) -> str:
-      return str(self.val)
+        def __repr__(self) -> str:
+            return str(self.val)
   ```
   - 每次使用类创建新对象时，都会自动调用 `__init__()` 函数
   - `self` 参数是对类的当前实例的引用，用于访问属于该类的变量

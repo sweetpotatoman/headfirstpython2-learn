@@ -22,17 +22,17 @@ FileNotFoundError: [Errno 2] No such file or directory: 'mysite.txt'
 #### 使用 try except 捕获异常
 **执行 `try_examples2.py`**
 - 当没有找到文件时
-  ```py
+  ```
   The data file is missing.
   ```
 
 - 当没权限打开文件时
-  ```py
+  ```
   This is not allowed.
   ```
 
 - 定义一个捕获所有异常的 **(catch-all)** except 代码组
-  ```py
+  ```
   Some other error occurred.
   ```
 

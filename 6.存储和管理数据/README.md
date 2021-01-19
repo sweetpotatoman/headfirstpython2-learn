@@ -77,7 +77,7 @@ pythons
 // 'Terry|John|Michael|Graham|Eric'
 ```
 
-> split 方法把这个过程翻过来
+> split 方法把这个过程反过来
 ```py
 individuals = pythons.split('|')
 individuals
